@@ -4,19 +4,19 @@ Prolog Ninety-nine
 Ponto de partida
 ----------------
 
-A cria√ß√£o desse desafio foi com base na implementa√ß√£o no **Ninety-nine** feita por [Pavel Fatin](https://pavelfatin.com/ninety-nine/).  *Acessado em 20 mar 2015*.
+A criaÁ„o desse desafio foi com base na implementÁ„o no **Ninety-nine** feita por [Pavel Fatin](https://pavelfatin.com/ninety-nine/).  *Acessado em 20 mar 2015*.
 
-Referencia
+ReferÍncia
 ----------
 
-Por√©m o conteudo desse projeto leva em considera√ß√£o as guide lines do projeto original, que est√° dispon√≠vel em: [Prolog Problems](https://sites.google.com/site/prologsite/prolog-problems). *Acessado em 20 mar 2015*.
+Por√©m o conteudo desse projeto leva em consideraÁ„o as guidelines do projeto original, que est· disponÌvel em: [Prolog Problems](https://sites.google.com/site/prologsite/prolog-problems). *Acessado em 20 mar 2015*.
 
-Defini√ß√£o
+DefiniÁ„o
 ---------
 
-A ideia principal √© realizar uma especifica√ß√£o em Java, criando testes unit√°rios onde os parametros do testes ser√£o incluidos, e a implementa√ß√£o dever√° ser feita usando as pr√°ticas propostas pelo TDD.
+A ideia principal È realizar uma especificaÁ„o em Java, criando testes unit·rios onde os parametros do testes ser„o incluidos, e a implementaÁ„o dever· ser feita usando as pr·ticas propostas pelo TDD.
 
 Detalhes
 --------
 
-Os testes unit√°rios ser√£o implementados utilizando inicialmente o framework de testes JUnit. Os que desejarem implementar uma solu√ß√£o para os testes, dever√£o criar um fork do projeto em sua conta do [github](http://github.com)/[bitbucket](https://bitbucket.org/)
+Os testes unit·rios ser√£o implementados utilizando inicialmente o framework de testes JUnit. Os que desejarem implementar uma soluÁ„o para os testes, dever„o criar um fork do projeto em sua conta do [github](http://github.com)/[bitbucket](https://bitbucket.org/)

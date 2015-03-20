@@ -1,18 +1,21 @@
 **A list is either empty or it is composed of a first element (head) and a tail, which is a list itself.** In Prolog we represent the empty list by the atom [] and a non-empty list by a term [H|T] where H denotes the head and T denotes the tail.
 
-**1.01 (*) Find the last element of a list.**
+
+1.01 (*) Find the last element of a list.
+------------
 
 Example:
 
     ?- my_last(X,[a,b,c,d]).
     X = d
 
-**1.02 (*) Find the last but one element of a list.**
+1.02 (*) Find the last but one element of a list.
+------------
     
     (de: zweitletztes Element, fr: avant-dernier élément)
 
-**1.03 (*) Find the K'th element of a list.**
-
+1.03 (*) Find the K'th element of a list.
+------------
 
 The first element in the list is number 1.
 
@@ -21,15 +24,19 @@ Example:
     ?- element_at(X,[a,b,c,d,e],3).
     X = c
 
-**1.04 (*) Find the number of elements of a list.**
+1.04 (*) Find the number of elements of a list.
+------------
 
-**1.05 (*) Reverse a list.**
+1.05 (*) Reverse a list.
+------------
 
-**1.06 (*) Find out whether a list is a palindrome.**
-    
+1.06 (*) Find out whether a list is a palindrome.
+------------
+
 A palindrome can be read forward or backward; e.g. [x,a,m,a,x].
 
-**1.07 (\*\*) Flatten a nested list structure.**
+1.07 (\*\*) Flatten a nested list structure.
+------------
 
 Transform a list, possibly holding lists as elements into a 'flat' list by replacing each list with its elements (recursively).
 
@@ -41,7 +48,8 @@ Example:
 
 Hint: Use the predefined predicates is_list/1 and append/3
 
-**1.08 (\*\*) Eliminate consecutive duplicates of list elements.**
+1.08 (\*\*) Eliminate consecutive duplicates of list elements.
+------------
 
 If a list contains repeated elements they should be replaced with a single copy of the element. The order of the elements should not be changed.
 
@@ -50,7 +58,8 @@ Example:
     ?- compress([a,a,a,a,b,c,c,a,a,d,e,e,e,e],X).
     X = [a,b,c,a,d,e]
 
-**1.09 (\*\*) Pack consecutive duplicates of list elements into sublists.**
+1.09 (\*\*) Pack consecutive duplicates of list elements into sublists.
+------------
 
 If a list contains repeated elements they should be placed in separate sublists.
 
@@ -60,7 +69,7 @@ Example:
     ?- pack([a,a,a,a,b,c,c,a,a,d,e,e,e,e],X).
     X = [[a,a,a,a],[b],[c,c],[a,a],[d],[e,e,e,e]]
 
-**1.10 (*) Run-length encoding of a list.**
+1.10 (*) Run-length encoding of a list.
 
 Use the result of problem 1.09 to implement the so-called run-length encoding data compression method. Consecutive duplicates of elements are encoded as terms [N,E] where N is the number of duplicates of the element E.
 
@@ -70,7 +79,8 @@ Example:
     ?- encode([a,a,a,a,b,c,c,a,a,d,e,e,e,e],X).
     X = [[4,a],[1,b],[2,c],[2,a],[1,d][4,e]]
 
-**1.11 (*) Modified run-length encoding.**
+1.11 (*) Modified run-length encoding.
+------------
 
 Modify the result of problem 1.10 in such a way that if an element has no duplicates it is simply copied into the result list. Only elements with duplicates are transferred as [N,E] terms.
 
@@ -79,11 +89,13 @@ Example:
     ?- encode_modified([a,a,a,a,b,c,c,a,a,d,e,e,e,e],X).
     X = [[4,a],b,[2,c],[2,a],d,[4,e]]
 
-**1.12 (\*\*) Decode a run-length encoded list.**
-    
+1.12 (\*\*) Decode a run-length encoded list.
+------------
+
 Given a run-length code list generated as specified in problem 1.11. Construct its uncompressed version.
 
-**1.13 (\*\*) Run-length encoding of a list (direct solution).**
+1.13 (\*\*) Run-length encoding of a list (direct solution).
+------------
 
 Implement the so-called run-length encoding data compression method directly. I.e. don't explicitly create the sublists containing the duplicates, as in problem 1.09, but only count them. As in problem 1.11, simplify the result list by replacing the singleton terms [1,X] by X.
 
@@ -92,14 +104,16 @@ Example:
     ?- encode_direct([a,a,a,a,b,c,c,a,a,d,e,e,e,e],X).
     X = [[4,a],b,[2,c],[2,a],d,[4,e]]
 
-**1.14 (*) Duplicate the elements of a list.**
+1.14 (*) Duplicate the elements of a list.
+------------
 
 Example:
 
     ?- dupli([a,b,c,c,d],X).
     X = [a,a,b,b,c,c,c,c,d,d]
 
-**1.15 (\*\*) Duplicate the elements of a list a given number of times.**
+1.15 (\*\*) Duplicate the elements of a list a given number of times.
+------------
 
 Example:
 
@@ -110,14 +124,16 @@ What are the results of the goal:
 
     ?- dupli(X,3,Y).
 
-**1.16 (\*\*) Drop every N'th element from a list.**
+1.16 (\*\*) Drop every N'th element from a list.
+------------
 
 Example:
 
     ?- drop([a,b,c,d,e,f,g,h,i,k],3,X).
     X = [a,b,d,e,g,h,k]
 
-**1.17 (*) Split a list into two parts; the length of the first part is given.**
+1.17 (*) Split a list into two parts; the length of the first part is given.
+------------
 
 Do not use any predefined predicates.
 
@@ -127,7 +143,8 @@ Example:
     L1 = [a,b,c]
     L2 = [d,e,f,g,h,i,k]
 
-**1.18 (\*\*) Extract a slice from a list.**
+1.18 (\*\*) Extract a slice from a list.
+------------
 
 Given two indices, I and K, the slice is the list containing the elements between the I'th and K'th element of the original list (both limits included). Start counting the elements with 1.
 
@@ -136,7 +153,8 @@ Example:
     ?- slice([a,b,c,d,e,f,g,h,i,k],3,7,L).
     X = [c,d,e,f,g]
 
-**1.19 (\*\*) Rotate a list N places to the left.**
+1.19 (\*\*) Rotate a list N places to the left.
+------------
 
 Examples:
 
@@ -148,7 +166,8 @@ Examples:
 
 Hint: Use the predefined predicates length/2 and append/3, as well as the result of problem 1.17.
 
-**1.20 (*) Remove the K'th element from a list.**
+1.20 (*) Remove the K'th element from a list.
+------------
 
 Example:
 
@@ -156,21 +175,24 @@ Example:
     X = b
     R = [a,c,d]
 
-**1.21 (*) Insert an element at a given position into a list.**
+1.21 (*) Insert an element at a given position into a list.
 
 Example:
 
     ?- insert_at(alfa,[a,b,c,d],2,L).
     L = [a,alfa,b,c,d]
 
-**1.22 (*) Create a list containing all integers within a given range.**
+1.22 (*) Create a list containing all integers within a given range.
+------------
 
 Example:
 
     ?- range(4,9,L).
     L = [4,5,6,7,8,9]
 
-**1.23 (\*\*) Extract a given number of randomly selected elements from a list.**
+1.23 (\*\*) Extract a given number of randomly selected elements from a list.
+------------
+
 The selected items shall be put into a result list.
 
 
@@ -181,7 +203,9 @@ Example:
 
 Hint: Use the built-in random number generator random/2 and the result of problem 1.20.
 
-**1.24 (*) Lotto: Draw N different random numbers from the set 1..M.**
+1.24 (*) Lotto: Draw N different random numbers from the set 1..M.
+------------
+
 The selected numbers shall be put into a result list.
     
 
@@ -192,7 +216,8 @@ Example:
 
 Hint: Combine the solutions of problems 1.22 and 1.23.
 
-**1.25 (*) Generate a random permutation of the elements of a list.**
+1.25 (*) Generate a random permutation of the elements of a list.
+------------
 
 Example:
 
@@ -201,7 +226,8 @@ Example:
 
 Hint: Use the solution of problem 1.23.
 
-**1.26 (\*\*) Generate the combinations of K distinct objects chosen from the N elements of a list**
+1.26 (\*\*) Generate the combinations of K distinct objects chosen from the N elements of a list
+------------
 
 In how many ways can a committee of 3 be chosen from a group of 12 people? We all know that there are C(12,3) = 220 possibilities (C(N,K) denotes the well-known binomial coefficients). For pure mathematicians, this result may be great. But we want to really generate all the possibilities (via backtracking).
 
@@ -213,7 +239,9 @@ Example:
     L = [a,b,e] ;
     ...
 
-**1.27 (\*\*) Group the elements of a set into disjoint subsets.**
+1.27 (\*\*) Group the elements of a set into disjoint subsets.
+------------
+
 a) In how many ways can a group of 9 people work in 3 disjoint subgroups of 2, 3 and 4 persons? Write a predicate that generates all the possibilities via backtracking.
 
 Example:
@@ -234,7 +262,9 @@ Note that we do not want permutations of the group members; i.e. [[aldo,beat],..
 
 You may find more about this combinatorial problem in a good book on discrete mathematics under the term "multinomial coefficients".
 
-**1.28 (\*\*) Sorting a list of lists according to length of sublists**
+1.28 (\*\*) Sorting a list of lists according to length of sublists
+------------
+
 a) We suppose that a list (InList) contains elements that are lists themselves. The objective is to sort the elements of InList according to their length. E.g. short lists first, longer lists later, or vice versa.
 
 Example:
@@ -254,4 +284,6 @@ Note that in the above example, the first two lists in the result L have length 
 
 
 
+
+_____________________
 Originalmente disponivel em : [Prolog Lists](https://sites.google.com/site/prologsite/prolog-problems/1). *Acessado em 20 mar 2015*.
