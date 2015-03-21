@@ -1,5 +1,11 @@
 
 *.class
 target/
+
+#ECLIPSE
 .classpath
 .project
+
+#IDEA
+.idea
+*.iml
