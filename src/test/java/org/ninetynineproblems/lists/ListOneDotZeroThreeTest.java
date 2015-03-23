@@ -38,6 +38,7 @@ public class ListOneDotZeroThreeTest {
                  { Arrays.asList(10, 90, 50, 79), 90 ,2, null},
                  { Arrays.asList("a", "b", "c"), "b", 2 , null},
                  { Arrays.asList(1L, 2L, 3L, 4L, 5L), 4L, 4 , null},
+                 { null, null, null, null},
                  { null, null, 1, null},
                  { Arrays.asList(9, 15, 97, 15, 97, 115), 97 ,3, null},
                  { Arrays.asList(1), 1, 1, null},
